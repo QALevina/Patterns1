@@ -31,7 +31,7 @@ class DeliveryTest {
 
     @BeforeEach
     void setupAll() {
-        //Configuration.holdBrowserOpen = true;
+        Configuration.holdBrowserOpen = true;
         open("http://localhost:9999");
 
 
@@ -272,7 +272,7 @@ class DeliveryTest {
 
     // !!! These tests are falling
 
-   /* @Test
+   @Test
     void invalidPhone() {
         var validUser = DataGenerator.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
@@ -312,7 +312,7 @@ class DeliveryTest {
         String planningDateText = $x("//div[@data-test-id='success-notification']/div[@class='notification__content']").getText();
         assertEquals("Встреча успешно запланирована на " + firstMeetingDate, planningDateText);
 
-    }*/
+    }
 
 
 }
