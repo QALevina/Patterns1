@@ -2,7 +2,6 @@ package ru.netology.delivery.test;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.Selenide;
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -272,7 +271,7 @@ class DeliveryTest {
 
     // !!! These tests are falling
 
-   @Test
+    @Test
     void invalidPhone() {
         var validUser = DataGenerator.Registration.generateUser("ru");
         var daysToAddForFirstMeeting = 4;
@@ -306,7 +305,6 @@ class DeliveryTest {
         $x("//*[@data-test-id='agreement']").click();
         $x("//*[@class='button__text']").click();
         $x("//form").should(Condition.visible, Duration.ofSeconds(15));
-
 
 
         String planningDateText = $x("//div[@data-test-id='success-notification']/div[@class='notification__content']").getText();
